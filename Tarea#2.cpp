@@ -54,15 +54,7 @@ void mostrarLista(Nodo* cabeza) {
         temp = temp->siguiente;
     }
 }
-void inicializarEstudiantes(Nodo*& cabeza) {
-    Nodo* estudiante1 = new Nodo{"Juan", "Perez", 20, "Calle 123", "Ingeniería", "Matemáticas", "Activo", nullptr};
-    Nodo* estudiante2 = new Nodo{"Maria", "Gomez", 22, "Avenida 456", "Medicina", "Biología", "Activo", nullptr};
-    Nodo* estudiante3 = new Nodo{"Carlos", "Lopez", 21, "Boulevard 789", "Derecho", "Historia", "Activo", nullptr};
 
-    estudiante1->siguiente = estudiante2;
-    estudiante2->siguiente = estudiante3;
-    cabeza = estudiante1;
-}
 
 
 void mostrarDatosEstudiante(Nodo* cabeza) {
@@ -167,7 +159,6 @@ int main() {
 
     char opcion;
     do {
-        inicializarEstudiantes(cabeza);
         std::cout << "Menu:\n";
         std::cout << "1. Agregar estudiante\n";
         std::cout << "2. Actualizar datos\n";
@@ -182,7 +173,7 @@ int main() {
             int edad;
 
             std::cout << "Ingrese nombre: ";
-
+            std::cin >> nombre;
             std::cout << "Ingrese apellido: ";
             std::cin >> apellido;
 
